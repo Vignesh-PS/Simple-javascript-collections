@@ -1,56 +1,128 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="description" content="Simple Javascript Calculator">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./style.css">
-<title>1.Simple Calculator</title>
-</head>
-    
-<body class="calc">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Simple Javascript Calculator" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>1.Simple Calculator</title>
+  </head>
+
+  <body class="calc">
     <h1>Simple Basic Calculator</h1>
 
     <form id="calcForm" name="calcForm">
-        <input class="display" readonly name="display"> <br>
+      <input class="display" readonly name="display" /> <br />
 
-        <div class="row">
-            <input type="button" class="plus_button" value="+">
-            <input type="button" class="minus_button" value="-">
-            <input type="button" value="*" class="mul_button">
-            <input type="button" value="/" class="divider_button">
-        </div>
-  
-        <div class="row">
-            <input type="button" value="1">
-            <input type="button" value="2">
-            <input type="button" value="3">
-            <input type="button" class="back_button" value="x"> 
-        </div>
-     
-        <div class="row">
-            <input type="button" value="4">
-            <input type="button" value="5">
-            <input type="button" value="6">
-            <input type="button"  value="^2">
-        </div>
+      <div class="row">
+        <input
+          type="button"
+          onClick="calcForm.display.value+='+'"
+          class="plus_button"
+          value="+"
+        />
+        <input
+          type="button"
+          onClick="calcForm.display.value+='-'"
+          class="minus_button"
+          value="-"
+        />
+        <input
+          type="button"
+          value="*"
+          class="mul_button"
+          onClick="calcForm.display.value+='*'"
+        />
+        <input
+          type="button"
+          value="/"
+          class="divider_button"
+          onClick="calcForm.display.value+='/'"
+        />
+      </div>
 
-        <div class="row">
-            <input type="button" value="7">
-        <input type="button" value="8">
-        <input type="button" value="9">
-        <input type="button"  value="f!"> 
-        </div>
+      <div class="row">
+        <input type="button" value="1" onClick="calcForm.display.value+='1'" />
+        <input type="button" value="2" onClick="calcForm.display.value+='2'" />
+        <input type="button" value="3" onClick="calcForm.display.value+='3'" />
+        <input
+          type="button"
+          class="back_button"
+          value="<--"
+          onClick="calcForm.display.value=backSpace()"
+        />
+      </div>
 
-        <div class="row">
-            <input type="button" class="clear_button" value="c">
-            <input type="button" value="0">
-            <input type="button" class="equal_button" value="=">
-        </div>
-       
-       
+      <div class="row">
+        <input type="button" value="4" onClick="calcForm.display.value+='4'" />
+        <input type="button" value="5" onClick="calcForm.display.value+='5'" />
+        <input type="button" value="6" onClick="calcForm.display.value+='6'" />
+        <input type="button" value="^2" onClick="calcForm.display.value=squareCalculate()" />
+      </div>
 
+      <div class="row">
+        <input type="button" value="7" onClick="calcForm.display.value+='7'" />
+        <input type="button" value="8" onClick="calcForm.display.value+='8'" />
+        <input type="button" value="9" onClick="calcForm.display.value+='9'" />
+        <input type="button" value="f!" onClick="calcForm.display.value=findFactorial()" />
+      </div>
 
+      <div class="row">
+        <input
+          type="button"
+          onclick="calcForm.display.value=''"
+          class="clear_button"
+          value="c"
+        />
+        <input type="button" value="0" onClick="calcForm.display.value+='0'" />
+        <input
+          type="button"
+          class="equal_button"
+          value="="
+          onClick="calcForm.display.value=evaluation(calcForm.display.value)"
+        />
+        <!-- <input type="button" class="equal_button" value="=" onClick="calcForm.display.value=eval(calcForm.display.value)"/> -->
+      </div>
     </form>
-</body>
+
+    <script>
+      //   function output(val) {
+      //     console.log(calcForm.display);
+      //   }
+      function evaluation(val) {
+        try {
+          return eval(val);
+        } catch {
+          console.log("error");
+          return "Syntax Error";
+        }
+      }
+
+      function backSpace() {
+        var str = calcForm.display.value;
+        console.log(str.length);
+          if (str != null && str.length > 0 ) {
+          str = str.substring(0, str.length  - 1);
+        }
+        return str;
+      }
+
+      function findFactorial(){
+
+        let val = eval(calcForm.display.value);
+        let result = 1;
+        for(let i=1;i<=val;i++){
+          result = result*i;
+        }
+        return result;
+      }
+
+      function squareCalculate(){
+        let val = eval(calcForm.display.value);
+        return val*val;
+      }
+
+ 
+    </script>
+  </body>
 </html>
