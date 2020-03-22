@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8">
+    <meta name="description" content="Digital clock using javascript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  </head>
+
+  <body>
+    <form id="tipForm">
+      <h1>Tip Calculator</h1>
+
+      <div class="form_field">
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" />
+      </div>
+      <div class="form_field">
+        <label for="tip">Tip percentage</label>
+        <input type="number" id="tip" />
+      </div>
+      <div class="form_field">
+        <label for="tip_amount">Tip amount</label>
+        <input readonly type="text" value="" id="tip_amount" />
+      </div>
+      <div class="form_field">
+        <label for="total_amount">Total Amount</label>
+        <input readonly type="text" id="total_amount" />
+      </div>
+
+      <div class="btn_calculate">
+        <input
+          class="calculate_button"
+          id="calculator"
+          type="reset"
+          value="Clear"
+        />
+
+        <input
+          class="calculate_button"
+          id="calculator"
+          type="submit"
+          value="Calculate"
+        />
+      </div>
+    </form>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
