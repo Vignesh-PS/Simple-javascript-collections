@@ -16,4 +16,7 @@ h1{
 #clock{
     background: #c32020;
     padding: 60px 30px;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
 }
