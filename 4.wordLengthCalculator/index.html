@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8">
+    <meta name="description" content="Digital clock using javascript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Words Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  </head>
+
+  <body>
+    <form id="wordForm">
+      <h1>Words Calculator</h1>
+      <label for="words">Enter words</label>
+
+      <div class="form_field">
+         <textarea name="words" id="words" rows="5"></textarea>
+      </div>
+
+      <div class="display">
+        <div class="column">
+          <p>No of alphabet characters</p>
+          <p id="display_alpha_characters">console.log(object);</p>
+        </div>
+        <div class="column">
+          <p>No of number characters</p>
+          <p id="display_num_characters">console.log(object);</p>
+        </div>
+        <div class="column">
+          <p>No of special characters</p>
+          <p id="display_special_characters">console.log(object);</p>
+        </div>
+       
+        <div class="clear"></div>
+      </div>
+
+      <div class="btn_calculate">
+        <input
+          class="calculate_button"
+          id="calculator_clear"
+          type="reset"
+          value="Clear"
+        />
+
+        <input
+          class="calculate_button"
+          id="calculator_submit"
+          type="submit"
+          value="Calculate"
+        />
+      </div>
+    </form>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

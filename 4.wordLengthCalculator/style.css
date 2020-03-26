@@ -1,0 +1,80 @@
+body{
+    padding: 5%;
+    background: #171717;
+}
+
+#wordForm{
+    max-width: 600px;
+    margin: auto;
+    background: #8787c3;
+    border-radius: 8px;
+    padding: 30px;
+} 
+h1{
+    text-align: center;
+    color: #ffe;
+    padding: 0px 30px 30px 20px;
+    font-size: 50px;
+    margin: 0 auto; 
+}
+
+.form_field{
+    display: flex;
+    width: 100%;
+    margin: 15px 0px;
+}
+
+.form_field label{
+    width: 30%;
+    display: block;
+    padding: 10px 0px;
+}
+.form_field textarea{
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.calculate_button{
+    border: none;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background: #4b4bb5;
+    color: #fff;
+    transition-duration: 1s;
+    border: 2px solid #1b1bb7;
+    cursor: pointer;
+}
+
+.calculate_button:hover{
+    background: #1b1bb7;
+}
+
+.btn_calculate{
+    margin: auto;
+    width: fit-content;
+    margin-top: 30px;
+}
+
+label{
+    text-align: center;
+    display: block;
+    color: azure;
+    font-size: 30px;
+}
+/* 
+#display_characters{
+    display: block;
+} */
+.display{
+    display: none;
+}
+.column{
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+.clear{
+    clear: both;
+}
