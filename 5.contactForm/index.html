@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8">
+    <meta name="description" content="Contact form using javascript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  </head>
+
+  <body>
+    <form id="contactForm">
+      <h1>Contact Form</h1>
+
+      <div class="form_field">
+        <label for="name">Enter Name</label>
+        <input type="text" id="name" />
+      </div>
+      <div class="form_field">
+        <label for="email">Enter Email</label>
+        <input type="text" id="email" />
+      </div>
+      <div class="form_field">
+        <label for="message">Messaage</label>
+        <!-- <input type="text" value="" id="message" /> -->
+        <textarea name="message" id="message" rows="5"></textarea>
+      </div>
+
+      <div class="btn_submit">
+        <input
+          class="submit_button"
+          id="reset"
+          type="reset"
+          value="Clear"
+        />
+
+        <input
+          class="submit_button"
+          id="submit"
+          type="submit"
+          value="Submit"
+        />
+      </div>
+    </form>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
